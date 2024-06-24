@@ -1,15 +1,22 @@
 {
     "name": "@grahamcrackers/components",
-    "version": "0.0.1",
+    "version": "0.0.3",
     "description": "A Component Library",
     "author": "Graham Rogers",
     "license": "MIT",
     "type": "module",
     "types": "./dist/index.d.ts",
+    "files": [
+        "dist",
+        "index.css",
+        "tailwind.config.ts"
+    ],
     "exports": {
-        ".": {
-            "require": "./dist/index.cjs",
-            "import": "./dist/index.js"
+        "./index.css": "./dist/index.css",
+        "./alert-dialog": {
+            "require": "./dist/components/alert-dialog/index.cjs",
+            "import": "./dist/components/alert-dialog/index.js",
+            "types": "./dist/components/alert-dialog/index.d.ts"
         },
         "./button": {
             "require": "./dist/components/button/index.cjs",
@@ -19,12 +26,12 @@
     },
     "sideEffects": [
         "dist/*",
-        "index.css",
+        "dist/index.css",
         "tailwind.config.ts"
     ],
     "scripts": {
         "dev": "tsc -w",
-        "build": "NODE_ENV=production npx esbuild ./src/index.ts --format=esm --outfile=./dist/components.esm.js --outbase=./src --minify",
+        "build": "yarn tsx ./scripts/build",
         "build:file": "NODE_ENV=production npx esbuild ./src/index.ts --format=esm --outfile=./dist/components.esm.js --outbase=./src --minify",
         "build:prod": "NODE_ENV=production tsup",
         "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
