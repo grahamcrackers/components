@@ -9,6 +9,6 @@ export const tsup: Options = {
     dts: true,
     splitting: false,
     format: ["cjs", "esm"],
-    external: ["react", "react-dom"],
+    external: ["react", "react-dom", "react/jsx-runtime"],
     injectStyle: false,
 };

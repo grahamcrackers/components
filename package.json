@@ -17,10 +17,7 @@
     "scripts": {
         "dev": "tsc -w",
         "build": "yarn tsx ./scripts/build",
-        "build:file": "NODE_ENV=production npx esbuild ./src/index.ts --format=esm --outfile=./dist/components.esm.js --outbase=./src --minify",
-        "build:prod": "NODE_ENV=production tsup",
         "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-        "release": "yarn release-it",
         "prepare": "husky",
         "commit": "git-cz"
     },
@@ -95,7 +92,6 @@
         "fast-glob": "^3.3.2",
         "fs-extra": "^11.2.0",
         "husky": "^9.0.11",
-        "klaw": "^4.1.0",
         "lint-staged": "^15.2.7",
         "postcss": "^8.4.38",
         "prettier": "^3.3.2",
