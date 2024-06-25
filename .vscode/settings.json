@@ -3,4 +3,16 @@
         "source.fixAll.eslint": "explicit"
     },
     "typescript.preferences.importModuleSpecifier": "non-relative",
+    "tailwindCSS.classAttributes": [
+        "class",
+        "className",
+        "ngClass",
+        ".*Styles.*",
+    ],
+    "tailwindCSS.experimental.classRegex": [
+        // https://github.com/paolotiu/tailwind-intellisense-regex-list?tab=readme-ov-file#clsx
+        ["clsx\\(.*?\\)(?!\\])", "(?:'|\"|`)([^\"'`]*)(?:'|\"|`)"],
+        // https://github.com/paolotiu/tailwind-intellisense-regex-list?tab=readme-ov-file#cva
+        ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+    ]
 }

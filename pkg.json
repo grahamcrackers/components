@@ -6,6 +6,27 @@
     "license": "MIT",
     "type": "module",
     "types": "./dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "exports": {
+        "./index.css": "./dist/index.css",
+        "./tailwind.config": "./dist/tailwind.config.ts",
+        "./contexts": {
+            "require": "./dist/components/contexts/index.cjs",
+            "import": "./dist/components/contexts/index.js"
+        },
+        "./alert-dialog": {
+            "require": "./dist/components/alert-dialog/index.cjs",
+            "import": "./dist/components/alert-dialog/index.js",
+            "types": "./dist/components/alert-dialog/index.d.ts"
+        },
+        "./button": {
+            "require": "./dist/components/button/index.cjs",
+            "import": "./dist/components/button/index.js",
+            "types": "./dist/components/button/index.d.ts"
+        }
+    },
     "sideEffects": [
         "dist/*",
         "dist/index.css",
@@ -52,23 +73,5 @@
         "tsup": "^6.0.1",
         "tsx": "^4.15.7",
         "typescript": "^5.5.2"
-    },
-    "exports": {
-        "./index.css": "./dist/index.css",
-        "./tailwind.config": "./dist/tailwind.config.ts",
-        "./contexts": {
-            "require": "./dist/components/contexts/index.cjs",
-            "import": "./dist/components/contexts/index.js"
-        },
-        "./alert-dialog": {
-            "require": "./dist/components/alert-dialog/index.cjs",
-            "import": "./dist/components/alert-dialog/index.js",
-            "types": "./dist/components/alert-dialog/index.d.ts"
-        },
-        "./button": {
-            "require": "./dist/components/button/index.cjs",
-            "import": "./dist/components/button/index.js",
-            "types": "./dist/components/button/index.d.ts"
-        }
     }
 }
