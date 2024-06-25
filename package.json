@@ -58,9 +58,8 @@
     },
     "lint-staged": {
         "./{src,tests}/**/*.{ts,tsx}": [
-            "eslint --ignore-path .gitignore --fix"
-        ],
-        "*": "prettier --write"
+            "yarn lint --fix"
+        ]
     },
     "types": "./dist/index.d.ts",
     "exports": {
