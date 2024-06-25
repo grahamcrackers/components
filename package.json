@@ -16,6 +16,7 @@
         "build:file": "NODE_ENV=production npx esbuild ./src/index.ts --format=esm --outfile=./dist/components.esm.js --outbase=./src --minify",
         "build:prod": "NODE_ENV=production tsup",
         "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+        "release": "yarn release-it",
         "prepare": "husky",
         "commit": "git-cz"
     },
