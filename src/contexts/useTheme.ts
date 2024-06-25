@@ -1,4 +1,5 @@
 import React from "react";
+
 import { ThemeProviderContext } from "./ThemeProvider";
 
 export const useTheme = () => {
