@@ -25,6 +25,7 @@ module.exports = {
         // e.g. "@typescript-eslint/explicit-function-return-type": "off",
         // this really shouldn't be happening, but typescript takes care of our prop-types anyway
         "react/prop-types": "off",
+        "@typescript-eslint/consistent-type-imports": "error",
         "@typescript-eslint/no-unused-vars": [
             "warn",
             {
@@ -34,8 +35,5 @@ module.exports = {
             },
         ],
     },
-    ignorePatterns: [
-        "dist",
-        "node_modules"
-    ]
+    ignorePatterns: ["dist", "node_modules", ".github/workflows"],
 };

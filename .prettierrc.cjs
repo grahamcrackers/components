@@ -7,7 +7,7 @@ module.exports = {
     tabWidth: 4,
     importOrder: [
         "^(react/(.*)$)|^(react$)",
-        "^(next/(.*)$)|^(next$)",
+        "^(next/(.*)$)|^(next$)",  
         "<THIRD_PARTY_MODULES>",
         "",
         "^types$",
@@ -30,4 +30,12 @@ module.exports = {
     importOrderMergeDuplicateImports: true,
     importOrderCombineTypeAndValueImports: true,
     plugins: ["@ianvs/prettier-plugin-sort-imports"],
+    overrides: [
+        {
+            files: "**/*.{yml,yaml}",
+            options: {
+                tabWidth: 2,
+            }
+        }
+    ]
 };
