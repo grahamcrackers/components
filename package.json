@@ -5,6 +5,18 @@
     "author": "Graham Rogers",
     "license": "MIT",
     "type": "module",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/index.js",
+            "require": "./dist/index.cjs"
+        },
+        "./*": {
+            "import": "./dist/components/*/index.js",
+            "require": "./dist/components/*/index.cjs",
+            "types": "./dist/components/*/index.d.ts"
+        }
+    },
     "sideEffects": [
         "dist/*",
         "dist/index.css",
@@ -108,30 +120,6 @@
     "config": {
         "commitizen": {
             "path": "./node_modules/cz-conventional-changelog"
-        }
-    },
-    "types": "./dist/index.d.ts",
-    "exports": {
-        "./index.css": "./dist/index.css",
-        "./tailwind.config": "./dist/tailwind.config.ts",
-        "./contexts": {
-            "require": "./dist/components/contexts/index.cjs",
-            "import": "./dist/components/contexts/index.js"
-        },
-        "./alert-dialog": {
-            "require": "./dist/components/alert-dialog/index.cjs",
-            "import": "./dist/components/alert-dialog/index.js",
-            "types": "./dist/components/alert-dialog/index.d.ts"
-        },
-        "./button": {
-            "require": "./dist/components/button/index.cjs",
-            "import": "./dist/components/button/index.js",
-            "types": "./dist/components/button/index.d.ts"
-        },
-        "./card": {
-            "require": "./dist/components/card/index.cjs",
-            "import": "./dist/components/card/index.js",
-            "types": "./dist/components/card/index.d.ts"
         }
     }
 }
