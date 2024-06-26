@@ -1,6 +1,6 @@
 {
     "name": "@grahamcrackers/components",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "A Component Library",
     "author": "Graham Rogers",
     "license": "MIT",
@@ -30,6 +30,7 @@
         "dev": "tsc -w",
         "build": "tsup",
         "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+        "release": "yarn build && yarn changeset publish",
         "prepare": "husky",
         "commit": "git-cz"
     },
