@@ -1,8 +1,8 @@
 ---
-title: Architecture guide
+title: Button guide
 nextjs:
   metadata:
-    title: Architecture guide
+    title: Button guide
     description: Quidem magni aut exercitationem maxime rerum eos.
 ---
 
