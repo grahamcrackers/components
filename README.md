@@ -2,8 +2,7 @@
 
 ![NPM Version](https://img.shields.io/npm/v/@grahamcrackers/components)
 
-
-An example of a component library of [shadcn](https://ui.shadcn.com/) components with a theme, in a tree-shakeable, 
+An example of a component library of [shadcn](https://ui.shadcn.com/) components with a theme, in a tree-shakeable,
 reusable package, and compatible with esm and cjs projects.
 
 ## Setup
@@ -11,35 +10,39 @@ reusable package, and compatible with esm and cjs projects.
 Hope to have a cli to automatically do this, but for now:
 
 Install tailwindcss
+
 ```bash
 yarn install tailwindcss postcss autoprefixer
 npx tailwindcss init -p
 ```
 
 Add to your tailwind.config.js
+
 ```js
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     content: [
         "./index.html",
         "./src/**/*.{js,ts,jsx,tsx}",
-        "./node_modules/@grahamcrackers/components/**/*{js,ts,jsx,tsx}"
+        "./node_modules/@grahamcrackers/components/**/*{js,ts,jsx,tsx}",
     ],
     theme: {
         extend: {},
     },
     plugins: [],
-}
+};
 ```
 
 Configure your css
+
 ```css
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-    :root, .light {
+    :root,
+    .light {
         --background: 0 0% 100%;
         --foreground: 222.2 84% 4.9%;
 
@@ -110,5 +113,4 @@ Configure your css
         @apply bg-background text-foreground;
     }
 }
-
 ```

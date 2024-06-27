@@ -1,0 +1,9 @@
+{
+    "extends": "@repo/typescript-config/node.json",
+    "compilerOptions": {
+        "outDir": "dist",
+        "declaration": true
+    },
+    "include": ["src", "turbo", "tsup.config.ts"],
+    "exclude": ["dist"]
+}
