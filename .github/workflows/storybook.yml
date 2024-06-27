@@ -1,0 +1,17 @@
+name: deploy storybook
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - id: build-publish
+        uses: bitovi/github-actions-react-to-github-pages@v1.2.4
+        with:
+          path: apps/storybook
+          install_command: yarn install
+          build_command: yarn build
