@@ -1,7 +1,7 @@
+import clsx from 'clsx'
 import { type Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import localFont from 'next/font/local'
-import clsx from 'clsx'
 
 import { Providers } from '@/app/providers'
 import { Layout } from '@/components/Layout'
@@ -24,10 +24,9 @@ const lexend = localFont({
 export const metadata: Metadata = {
     title: {
         template: '%s - Docs',
-        default: 'CacheAdvance - Never miss the cache again.',
+        default: '@grahamcrackers/components - A Component Library',
     },
-    description:
-        'Cache every single thing your app could ever do ahead of time, so your code never even has to run at all.',
+    description: 'A library of react components in a single package.',
 }
 
 export default function RootLayout({

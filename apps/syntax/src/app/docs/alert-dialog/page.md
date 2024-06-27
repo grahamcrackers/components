@@ -1,8 +1,8 @@
 ---
-title: Basics of time-travel
+title: Alert Dialog guide
 nextjs:
   metadata:
-    title: Basics of time-travel
+    title: Alert Dialog guide
     description: Quidem magni aut exercitationem maxime rerum eos.
 ---
 
