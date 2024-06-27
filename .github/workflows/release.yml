@@ -1,9 +1,12 @@
-name: Release
+name: release
 
+# only run if on main branch and there are changes in the components folder
 on:
   push:
     branches:
       - main
+    paths:
+      - packages/components/**
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
